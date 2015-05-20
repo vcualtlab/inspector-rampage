@@ -66,7 +66,7 @@
 									<p class="tags"><?php echo get_the_term_list( get_the_ID(), 'custom_tag', '<span class="tags-title">' . __( 'Custom Tags:', 'bonestheme' ) . '</span> ', ', ' ) ?></p>
 
 								</footer>
-
+								<?php comments_template(); ?>
 							</article>
 
 							<?php endwhile; ?>

@@ -45,7 +45,7 @@
 								<footer class="article-footer">
 
 								</footer>
-
+								<?php comments_template(); ?>
 							</article>
 
 							<?php endwhile; else : ?>
