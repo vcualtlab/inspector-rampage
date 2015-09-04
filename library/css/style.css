@@ -1311,6 +1311,13 @@ POSTS & CONTENT STYLES
   .thumbnail.show {
     max-height: 30px; }
 
+.rampage .active-plugins {
+  list-style-type: circle;
+  margin-left: 20px; }
+
+.notes p {
+  margin-top: 0; }
+
 /******************************************************************
 PAGE NAVI STYLES
 ******************************************************************/

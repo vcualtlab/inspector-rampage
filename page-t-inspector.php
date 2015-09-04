@@ -42,7 +42,7 @@ Template Name: Inspector Rampage
 		                			<strong>Admin Email:</strong> <a href="mailto:{{post.rampage.admin_email}}">{{post.rampage.admin_email}}</a><br/> 
 		                <?php } ?>
 		                            <strong>Active Plugins:</strong>
-		                            <ul>
+		                            <ul class="active-plugins">
 		                                <li ng-repeat="plugin in post.rampage.active_plugins" 
 		                                    ng-click="setQuery(plugin)"
 		                                    class="clickable">{{plugin}}</li>
@@ -64,6 +64,11 @@ Template Name: Inspector Rampage
 	                            			<span class="clickable"> {{cat.name}}</span>
 	                            		|</span>
 	                            </p>
+
+	                            <div ng-if="post.content" class="notes">
+	                            	<strong>Notes: </strong>
+	                            	<div ng-bind-html="post.content">{{post.content}}</div>
+	                            </div>
 							</div>
                             
                         </section>
