@@ -1,4 +1,4 @@
-/******************************************************************
+  /******************************************************************
 Site Name: VCUarts
 Author: VCUarts Web Dev Team
 
@@ -11,7 +11,7 @@ Stylesheet: Main Stylesheet
 
 $susy: (
   columns: 12,
-  gutters: (2/3),
+  gutters: (.2),
   math: fluid,
   output: float,
   gutter-position: after,
@@ -24,7 +24,7 @@ $susy: (
   ),
 );
 
-$wrapper-width: 1600px;
+$wrapper-width: 2300px;
 
 /*********************
 IMPORTING PARTIALS

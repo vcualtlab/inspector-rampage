@@ -2,19 +2,29 @@
 LAYOUT & GRID STYLES
 *********************/
 
-.wrap {
-  @include container();
+.container {
+  @include container($wrapper-width);
 }
 
-.inner-content, .inner-footer, .inner-header {
-  @include container();
-  overflow: hidden;
-}
+.rampages .rampage{
+	@include breakpoint(500px){
+		@include gallery(6 of 12);
+	}
 
-.main {
-  overflow: hidden;
-}
+	@include breakpoint(900px){
+		@include gallery(4 of 12);
+	}
+	
+	@include breakpoint(1200px){
+		@include gallery(3 of 12);
+	}
 
-.article-footer {
-  overflow: hidden;
+	@include breakpoint(1500px){
+		@include gallery(2.4 of 12);
+	}
+
+	@include breakpoint(2000px){
+		@include gallery(2 of 12);
+	}
+
 }

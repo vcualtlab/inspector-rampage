@@ -971,7 +971,7 @@ GENERAL STYLES
 *********************/
 body {
   color: #323944;
-  font-family: "Crimson Text", Cambria, Times New Roman, Times, serif;
+  font-family: "Ubuntu", Helvetica, Arial, sans-serif;
   font-size: 100%;
   line-height: 1.5;
   -webkit-font-smoothing: antialiased; }
@@ -1018,30 +1018,124 @@ style a page via class
 /*********************
 LAYOUT & GRID STYLES
 *********************/
-.wrap {
-  max-width: 100%;
+.container {
+  max-width: 2300px;
   margin-left: auto;
   margin-right: auto; }
-  .wrap:after {
+  .container:after {
     content: " ";
     display: block;
     clear: both; }
 
-.inner-content, .inner-footer, .inner-header {
-  max-width: 100%;
-  margin-left: auto;
-  margin-right: auto;
-  overflow: hidden; }
-  .inner-content:after, .inner-footer:after, .inner-header:after {
-    content: " ";
-    display: block;
-    clear: both; }
+@media (min-width: 500px) {
+  .rampages .rampage {
+    width: 49.2957746479%;
+    float: left; }
+    .rampages .rampage:nth-child(2n + 1) {
+      margin-left: 0;
+      margin-right: -100%;
+      clear: both;
+      margin-left: 0; }
+    .rampages .rampage:nth-child(2n + 2) {
+      margin-left: 50.7042253521%;
+      margin-right: -100%;
+      clear: none; } }
 
-.main {
-  overflow: hidden; }
+@media (min-width: 900px) {
+  .rampages .rampage {
+    width: 32.3943661972%;
+    float: left; }
+    .rampages .rampage:nth-child(3n + 1) {
+      margin-left: 0;
+      margin-right: -100%;
+      clear: both;
+      margin-left: 0; }
+    .rampages .rampage:nth-child(3n + 2) {
+      margin-left: 33.8028169014%;
+      margin-right: -100%;
+      clear: none; }
+    .rampages .rampage:nth-child(3n + 3) {
+      margin-left: 67.6056338028%;
+      margin-right: -100%;
+      clear: none; } }
 
-.article-footer {
-  overflow: hidden; }
+@media (min-width: 1200px) {
+  .rampages .rampage {
+    width: 23.9436619718%;
+    float: left; }
+    .rampages .rampage:nth-child(4n + 1) {
+      margin-left: 0;
+      margin-right: -100%;
+      clear: both;
+      margin-left: 0; }
+    .rampages .rampage:nth-child(4n + 2) {
+      margin-left: 25.3521126761%;
+      margin-right: -100%;
+      clear: none; }
+    .rampages .rampage:nth-child(4n + 3) {
+      margin-left: 50.7042253521%;
+      margin-right: -100%;
+      clear: none; }
+    .rampages .rampage:nth-child(4n + 4) {
+      margin-left: 76.0563380282%;
+      margin-right: -100%;
+      clear: none; } }
+
+@media (min-width: 1500px) {
+  .rampages .rampage {
+    width: 18.8732394366%;
+    float: left; }
+    .rampages .rampage:nth-child(5n + 1) {
+      margin-left: 0;
+      margin-right: -100%;
+      clear: both;
+      margin-left: 0; }
+    .rampages .rampage:nth-child(5n + 2) {
+      margin-left: 20.2816901408%;
+      margin-right: -100%;
+      clear: none; }
+    .rampages .rampage:nth-child(5n + 3) {
+      margin-left: 40.5633802817%;
+      margin-right: -100%;
+      clear: none; }
+    .rampages .rampage:nth-child(5n + 4) {
+      margin-left: 60.8450704225%;
+      margin-right: -100%;
+      clear: none; }
+    .rampages .rampage:nth-child(5n + 5) {
+      margin-left: 81.1267605634%;
+      margin-right: -100%;
+      clear: none; } }
+
+@media (min-width: 2000px) {
+  .rampages .rampage {
+    width: 15.4929577465%;
+    float: left; }
+    .rampages .rampage:nth-child(6n + 1) {
+      margin-left: 0;
+      margin-right: -100%;
+      clear: both;
+      margin-left: 0; }
+    .rampages .rampage:nth-child(6n + 2) {
+      margin-left: 16.9014084507%;
+      margin-right: -100%;
+      clear: none; }
+    .rampages .rampage:nth-child(6n + 3) {
+      margin-left: 33.8028169014%;
+      margin-right: -100%;
+      clear: none; }
+    .rampages .rampage:nth-child(6n + 4) {
+      margin-left: 50.7042253521%;
+      margin-right: -100%;
+      clear: none; }
+    .rampages .rampage:nth-child(6n + 5) {
+      margin-left: 67.6056338028%;
+      margin-right: -100%;
+      clear: none; }
+    .rampages .rampage:nth-child(6n + 6) {
+      margin-left: 84.5070422535%;
+      margin-right: -100%;
+      clear: none; } }
 
 /*********************
 LINK STYLES
@@ -1150,130 +1244,31 @@ POSTS & CONTENT STYLES
 .content {
   margin-top: 1.5em; }
 
-.hentry {
-  background-color: #fff;
-  border-radius: 3px;
-  margin-bottom: 1.5em;
-  border: 1px solid #ccc;
-  overflow: hidden; }
-  .hentry header {
-    border-bottom: 1px solid #f8f9fa;
-    padding: 1.5em; }
-  .hentry footer {
-    padding: 1.5em;
-    border-top: 1px solid #f8f9fa; }
-    .hentry footer p {
-      margin: 0; }
+.rampages {
+  margin-top: 2em; }
 
-/* end .hentry */
-.single-title,
-.page-title,
-.entry-title {
-  margin: 0; }
+.rampage {
+  padding: 1em;
+  border: 1px solid #eaedf2;
+  margin-bottom: 2em; }
 
-/* want to style individual post classes? Booya! */
-/* post by id (i.e. post-3) */
-/* general post style */
-/* general article on a page style */
-/* general style on an attatchment */
-/* sticky post style */
-/* hentry class */
-/* style by category (i.e. category-videos) */
-/* style by tag (i.e. tag-news) */
-/* post meta */
-.byline {
-  color: #9fa6b4;
-  font-style: italic;
-  margin: 0; }
-
-/* entry content */
-.entry-content {
-  padding: 1.5em 1.5em 0;
-  overflow: hidden;
-  /*
-      image alignment on a screen this size may be
-      a bit difficult. It's set to start aligning
-      and floating images at the next breakpoint,
-      but it's up to you. Feel free to change it up.
-      */ }
-  .entry-content p {
-    margin: 0 0 1.5em; }
-  .entry-content table {
-    width: 100%;
-    border: 1px solid #eaedf2;
-    margin-bottom: 1.5em; }
-    .entry-content table caption {
-      margin: 0 0 7px;
-      font-size: 0.75em;
-      color: #9fa6b4;
-      text-transform: uppercase;
-      letter-spacing: 1px; }
-  .entry-content tr {
-    border-bottom: 1px solid #eaedf2; }
-    .entry-content tr:nth-child(even) {
-      background-color: #f8f9fa; }
-  .entry-content td {
-    padding: 7px;
-    border-right: 1px solid #eaedf2; }
-    .entry-content td:last-child {
-      border-right: 0; }
-  .entry-content th {
-    background-color: #f8f9fa;
-    border-bottom: 1px solid #eaedf2;
-    border-right: 1px solid #eaedf2; }
-    .entry-content th:last-child {
-      border-right: 0; }
-  .entry-content blockquote {
-    margin: 0 0 1.5em 0.75em;
-    padding: 0 0 0 0.75em;
-    border-left: 3px solid #2980b9;
-    font-style: italic;
-    color: #9fa6b4; }
-  .entry-content dd {
-    margin-left: 0;
-    font-size: 0.9em;
-    color: #787878;
-    margin-bottom: 1.5em; }
-  .entry-content img {
-    margin: 0 0 1.5em 0;
-    max-width: 100%;
-    height: auto; }
-  .entry-content .size-auto,
-  .entry-content .size-full,
-  .entry-content .size-large,
-  .entry-content .size-medium,
-  .entry-content .size-thumbnail {
-    max-width: 100%;
-    height: auto; }
-  .entry-content pre {
-    background: #323944;
-    color: #f8f9fa;
-    font-size: 0.9em;
-    padding: 1.5em;
-    margin: 0 0 1.5em;
-    border-radius: 3px; }
-
-/* end .entry-content */
-.wp-caption {
+.rampage img {
+  background: #eaedf2;
+  padding: .25em;
+  border: 0 0 0 0;
   max-width: 100%;
-  background: #eee;
-  padding: 5px;
-  /* images inside wp-caption */ }
-  .wp-caption img {
-    max-width: 100%;
-    margin-bottom: 0;
-    width: 100%; }
-  .wp-caption p.wp-caption-text {
-    font-size: 0.85em;
-    margin: 4px 0 7px;
-    text-align: center; }
+  height: auto; }
 
-/* end .wp-caption */
-/* image gallery styles */
-/* end .gallery */
-/* gallery caption styles */
-.tags {
-  margin: 0; }
+.active-plugins {
+  margin: -1em 0 0 1em;
+  list-style-type: disc; }
+
+.rampage .meta.ng-enter {
+  transition: 0.5s linear all;
+  opacity: 0; }
+
+.rampage .meta.ng-enter.ng-enter-active {
+  opacity: 1; }
 
 /******************************************************************
 PAGE NAVI STYLES
