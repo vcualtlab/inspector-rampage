@@ -2,12 +2,30 @@
 LINK STYLES
 *********************/
 
+
+.clickable{
+  color: $link-color;
+  cursor: pointer;
+  transition: all .3s ease;
+
+  &:hover{
+    color: $white;
+    background: $link-color;
+  }
+
+  &.nobg:hover{
+    background: transparent;
+  }
+}
+
 a, a:visited {
   color: $link-color;
+  transition: all .3s ease;
 
   /* on hover */
   &:hover, &:focus {
-    color: $link-hover;
+    color: $white;
+    background: $link-color;
   }
 
   /* on click */

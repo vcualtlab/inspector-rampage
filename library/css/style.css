@@ -1137,16 +1137,46 @@ LAYOUT & GRID STYLES
       margin-right: -100%;
       clear: none; } }
 
+.admin-bar .header.fixed {
+  top: 30px; }
+
+.header.fixed {
+  width: 100%;
+  position: fixed;
+  top: 0;
+  left: 0; }
+  .header.fixed form {
+    width: 100%; }
+    .header.fixed form input {
+      width: 100%;
+      max-width: 100%; }
+  .header.fixed .nofn {
+    position: fixed;
+    right: 10px;
+    top: 10px; }
+
 /*********************
 LINK STYLES
 *********************/
+.clickable {
+  color: #e96763;
+  cursor: pointer;
+  transition: all 0.3s ease; }
+  .clickable:hover {
+    color: #fff;
+    background: #e96763; }
+  .clickable.nobg:hover {
+    background: transparent; }
+
 a, a:visited {
   color: #e96763;
+  transition: all 0.3s ease;
   /* on hover */
   /* on click */
   /* mobile tap color */ }
   a:hover, a:focus, a:visited:hover, a:visited:focus {
-    color: #e3403b; }
+    color: #fff;
+    background: #e96763; }
   a:link, a:visited:link {
     /*
     this highlights links on iPhones/iPads.
@@ -1253,9 +1283,6 @@ POSTS & CONTENT STYLES
   margin-bottom: 2em; }
 
 .rampage img {
-  background: #eaedf2;
-  padding: .25em;
-  border: 0 0 0 0;
   max-width: 100%;
   height: auto; }
 
@@ -1269,6 +1296,20 @@ POSTS & CONTENT STYLES
 
 .rampage .meta.ng-enter.ng-enter-active {
   opacity: 1; }
+
+.rampage .meta.ng-enter.ng-leave-active {
+  opacity: 0; }
+
+.thumbnail {
+  max-height: calc( 300px + 10px);
+  transition: all 0.3s ease;
+  overflow: hidden;
+  background: #eaedf2;
+  padding: 5px;
+  border: 0 0 0 0;
+  cursor: pointer; }
+  .thumbnail.show {
+    max-height: 30px; }
 
 /******************************************************************
 PAGE NAVI STYLES

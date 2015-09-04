@@ -19,9 +19,6 @@ POSTS & CONTENT STYLES
 }
 
 .rampage img{
-  background: $gray;
-  padding: .25em;
-  border: 0 0 0 0;
   max-width: 100%;
   height: auto;
 }
@@ -39,4 +36,22 @@ POSTS & CONTENT STYLES
 
 .rampage .meta.ng-enter.ng-enter-active{
 	opacity: 1;
+}
+
+.rampage .meta.ng-enter.ng-leave-active{
+	opacity: 0;
+}
+
+.thumbnail{
+	max-height: calc( 300px + 10px );
+	transition: all .3s ease;
+	overflow: hidden;
+	background: $gray;
+  	padding: 5px;
+  	border: 0 0 0 0;
+  	cursor: pointer;
+
+	&.show{
+		max-height: 30px;
+	}
 }
