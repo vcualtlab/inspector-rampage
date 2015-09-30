@@ -28,7 +28,7 @@ Template Name: Inspector w http2pic
                            	<div ng-click="show=!show" 
 								 ng-class="{show: show}"
                            		 class="thumbnail">
-	                            <img src="http://augmenting.me/http2pic/api.php?viewport=350x350&type=jpg&cache={{post.ID}}-{{post.author.ID}}&url={{post.meta.url }}" />
+	                            <img src="http://augmenting.me/http2pic/api.php?viewport=350x350&onfail=http://augmenting.me/img/failed.jpg&type=jpg&cache={{post.ID}}-{{post.author.ID}}&url={{post.meta.url }}" />
 							</div>
 
 							<div class="meta" ng-if="show">
