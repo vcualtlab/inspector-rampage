@@ -443,13 +443,25 @@ if (!function_exists('wp_api_encode_rampage')){
 
 }
 
-// include( get_template_directory_uri()."library/grabzit/GrabzItClient.class.php");
+//Google screenshot builder
 
-// // Create the GrabzItClient class
-// // Replace "APPLICATION KEY", "APPLICATION SECRET" with the values from your account!
-// $grabzIt = new GrabzItClient($grabzItApplicationKey, $grabzItApplicationSecret);
+function set_screenshot($post_id) {
+	if (get_field('url')) {
+		$url = get_field('url');
+	{
+		if ( !$image = apc_fetch( "thumbnail:".$url ) ) 
+		{ 
+			$image = file_get_contents("https://www.googleapis.com/pagespeedonline/v1/runPagespeed?url=$url&screenshot=true");
+			$image = json_decode($image, true); 
+				
+			$image = $image['screenshot']['data'];
+			apc_add("thumbnail:".$url, $image, 2400); 
+		}
+			$image = str_replace(array('_','-'),array('/','+'),$image); 
+		$image = 'data:image/jpeg;base64,'.$image;
 
-// $id = $grabzIt->TakePicture("http://www.google.com", $grabzItHandlerUrl);
-
-/* DON'T DELETE THIS CLOSING TAG */
+	}
+	
+}
+}
 ?>
